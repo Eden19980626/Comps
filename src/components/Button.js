@@ -1,5 +1,5 @@
 import className from 'classnames';
-import { GoAlert } from 'react-icons/go';
+// import { GoAlert } from 'react-icons/go';
 function Button({
   children,
   primary,
@@ -9,8 +9,9 @@ function Button({
   danger,
   outline,
   square,
+  ...rest
 }) {
-  const classes = className('btn flex items-center', {
+  const classes = className(rest.className, 'btn flex items-center', {
     'btn-primary': primary,
     'btn-secondary': secondary,
     'btn-success': success,
@@ -20,8 +21,7 @@ function Button({
     'btn-square': square,
   });
   return (
-    <button className={classes}>
-      <GoAlert />
+    <button {...rest} className={classes}>
       {children}
     </button>
   );

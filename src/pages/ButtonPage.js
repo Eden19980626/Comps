@@ -1,5 +1,5 @@
-import Button from './components/Button';
-function App() {
+import Button from '../components/Button';
+function ButtonPage() {
   return (
     <div>
       <Button primary>123</Button>
@@ -8,4 +8,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default ButtonPage;
